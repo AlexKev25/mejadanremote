@@ -1,0 +1,86 @@
+ARDUINO MEGA PIN
+
+
+--button
+up = 22
+down = 24
+stop = 26
+
+--bluetooth slave
+address = 2016:4:114511
+
+
+--ultrasonik
+trigPin = 9
+echoPin = 8
+trigPin1 = 10
+echoPin1 = 11
+
+--lcd 16x2
+sda=sda
+scl=scl
+
+--l298n
+enA = 9
+in1 = 8
+in2 = 7
+enB = 3
+in3 = 4
+in4 = 5
+
+
+
+ARDUINO NANO PIN
+
+--bluetooth master
+address = 98d3:33:809aaf
+pairing langsung dengan slave
+
+--keypad
+D9-D2
+
+A = isi kode dosen & tinggi meja
+B = set tinggi meja
+C = simpan data kode dosen & tinggi meja
+D = kembali ke menu
+* = scroll atas
+# = scroll bawah
+0-9 = input
+
+--lcd 20x4
+sda=sda
+scl=scl
+
+--data logger
+CS = 10
+SCK = 13
+MOSI = 11
+MISO = 12
+VCC = 5V
+GND = GND
+
+--rtc ds1307
+SCL = A5
+SDA = A4
+VCC = 5V
+GND = GND
+
+Fungsi fungsi  yg tersedia untuk komunikasi serial Arduino
+if (Serial) : Untuk mengecek apakah Port sudah siap
+Serial.available() : Untuk mengecek apakah data sudah ada di buffer penerima
+Serial.begin() : untuk mengeset kecepatan transmisi data
+serial.end() : Untuk menon-aktifkan pin rx dan tx sbg fungsi serial dan kembali sbg pin I/O
+Serial.find() : mencari string dlm buffer data
+Serial.findUntil(): mencari buffer data sampai data dgn panjang/terminator nya yg diberikan ditemukan
+Serial.flush(): menunggu data terkirim semua
+Serial.parseFloat(): mengambil data float pertama dari data di buffer serial.
+serial.parseInt(): mengambil data integer pertama dari data di buffer serial.
+Serial.peek(): mengambil data berikutnya di bufer penerima
+Serial.print() : mengirim data ASCII
+Serial.println() : mengirimdata ASCII + CR,LF (kode enter)
+Serial.read(): membaca data yg diterima
+Serial.readBytes(): membaca data byte yg diterima
+Serial.readBytesUntil()
+Serial.setTimeout(): mengeset batas maksimum waktu  tunggu(timeout)  transmisi data.
+Serial.write() : mengirim data byte (numerik)
+Serial.serialEvent(): fungsi ini akan dipanggil jika data datang/diterima.berlaku spt interupsi serial.
